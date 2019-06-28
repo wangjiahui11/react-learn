@@ -23,13 +23,13 @@ class InputWithUserName extends Component {
     })
   }
 
-  handPropsToCommentInput(){
+  handPropsToCommentInput () {
     return this.state.username
   }
 
   render () {
     return <input
-      value={this.state.username}
+      value={this.state.username || ''}
       onBlur={this.handleUsernameBlur.bind(this)}
       onChange={this.handleUsernameChange.bind(this)} />
   }
